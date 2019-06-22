@@ -14,10 +14,25 @@ class Route{
     private function run(){
         $url= $this->getURL();
         $urlArray=explode('/',$url);
-        print_r($urlArray);
+        // print_r($urlArray);
 
         foreach($this->routes as $route){
-            $routeArray=explode('/',$route[])
+            $routeArray=explode('/',$route[0]);
+            print_r($routeArray);
+            echo '<br/>';
+            for($i=0;$i < count($routeArray); $i++){
+                if(strpos($routeArray[$i],"{") !== false && (count($urlArray)== \count($routeArray))){
+                    $routeArray[$i]=$urlArray[$i];
+                    
+                }
+                $route[0]=\implode($routeArray,'/');
+            }
+            if($url == $route[0]){
+                echo '<br/>Rota valída';
+                break;
+            }else{
+                echo '<br/>Rota invalida';
+            }
         }
     }
 }
