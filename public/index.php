@@ -1,7 +1,3 @@
-<?php
-require_once __DIR__ . "/../vendor/autoload.php";
-require_once __DIR__ . "/../core/bootstrap.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,5 +8,9 @@ require_once __DIR__ . "/../core/bootstrap.php";
 </head>
 <body>
     
+<?php
+require_once __DIR__ . "/../vendor/autoload.php";
+require_once __DIR__ . "/../core/bootstrap.php";
+?>
 </body>
 </html>
